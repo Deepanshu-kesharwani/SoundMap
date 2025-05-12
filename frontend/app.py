@@ -4,7 +4,7 @@ import requests
 from streamlit_player import st_player
 import pandas as pd
 import os
-
+from redis_setup import redis_client
 st.set_page_config(page_title="SoundMap", page_icon="🎵", layout="wide")
 
 # Load custom CSS (optional)

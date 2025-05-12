@@ -6,5 +6,5 @@ redis_client = redis.Redis(
     port=int(os.getenv("REDIS_PORT")),
     password=os.getenv("REDIS_PASSWORD"),
     decode_responses=True,
-    ssl=True  # VERY important since it's using `rediss://`
+    ssl=False  # VERY important since it's using `rediss://`
 )

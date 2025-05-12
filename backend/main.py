@@ -11,7 +11,7 @@ from services import (
     fetch_lastfm_recommendations,
     fetch_lastfm_user_recommendations
 )
-
+from redis_setup import redis_client
 load_dotenv()
 
 LASTFM_API_KEY = os.getenv("LASTFM_API_KEY", "cc44aad565d59e9bd419e29074db5914")
