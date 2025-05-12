@@ -1,0 +1,62 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    color: #1db954;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b3b3b3;
+    margin-top: 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #1db954;
+    margin-top: 2rem;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.stTextInput > div > div > input {
+    background-color: #282828;
+    color: #ffffff;
+    border: 1px solid #1db954;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #1db954;
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+}
+
+.stDataFrame {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .video-title {
+        font-size: 1rem;
+    }
+}
