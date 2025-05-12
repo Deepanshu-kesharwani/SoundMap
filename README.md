@@ -160,16 +160,6 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Create a Pull Request
 
----
-
-## Roadmap
-
-- [ ] User authentication
-- [ ] Advanced audio analysis (BPM, key detection, etc.)
-- [ ] Playlist and history features
-- [ ] More music data integrations
-- [ ] Enhanced recommendation algorithms
-- [ ] Mobile-friendly UI
 
 ---
 
