@@ -14,9 +14,15 @@ from services import (
 from redis_setup import redis_client
 load_dotenv()
 
-LASTFM_API_KEY = os.getenv("LASTFM_API_KEY", "YOUR_LASTFM_API_KEY")
-LASTFM_USERNAME = os.getenv("LASTFM_USERNAME", "YOUR_LASTFM_USERNAME")
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
+# LASTFM_API_KEY = os.getenv("LASTFM_API_KEY", "YOUR_LASTFM_API_KEY")
+# LASTFM_USERNAME = os.getenv("LASTFM_USERNAME", "YOUR_LASTFM_USERNAME")
+# YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY")
+# REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+# REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
+
+LASTFM_API_KEY = os.getenv("LASTFM_API_KEY", "cc44aad565d59e9bd419e29074db5914")
+LASTFM_USERNAME = os.getenv("LASTFM_USERNAME", "Gang_Star2024")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "AIzaSyBIVp8HgBSonRt3PoFEBt3jdc4-Krq9Fu4")
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 
