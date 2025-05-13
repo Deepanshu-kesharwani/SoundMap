@@ -26,7 +26,7 @@ left, right = st.columns([1, 2])
 if search_query:
     try:
         response = requests.post(
-            "https://fastapi-backend-vbvm.onrender.com/search",
+            "https://fastapi-backend-20nc.onrender.com/search",
             json={"query": search_query}
         )
 
