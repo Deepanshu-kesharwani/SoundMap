@@ -1,8 +1,14 @@
 # SoundMap
 
-SoundMap is a Python web application for audio exploration, music recommendation, and data visualization.  
+SoundMap is a comprehensive Python application platform featuring two main systems:
+
+## 🎵 Music Recommendation System
+A Python web application for audio exploration, music recommendation, and data visualization.  
 It uses **Streamlit** for a modern, interactive UI, **FastAPI** for backend REST APIs, **Redis** for fast caching, and connects to the **YouTube** and **Last.fm** APIs for rich music and audio metadata.  
 SoundMap provides personalized song recommendations, and allows you to play YouTube videos ad-free directly from the interface.
+
+## 📰 Fake News Detection System
+A complete machine learning system for detecting fake news using NLP techniques, real-time news verification, and an interactive web interface. Features multiple ML algorithms, real-time NewsAPI integration, ensemble predictions, and comprehensive visualizations.
 
 ---
 
@@ -34,6 +40,7 @@ SoundMap also features a recommendation engine that suggests songs based on your
 
 ## Features
 
+### 🎵 SoundMap Music System
 - **Music Recommendation:** Get personalized song suggestions powered by Last.fm and YouTube data.
 - **Ad-Free YouTube Playback:** Watch YouTube music videos without interruptions or ads directly in the Streamlit interface.
 - **Music Search:** Search for songs, artists, or albums using the Last.fm and YouTube APIs.
@@ -42,6 +49,15 @@ SoundMap also features a recommendation engine that suggests songs based on your
 - **RESTful Backend:** FastAPI backend provides robust, scalable API endpoints.
 - **Caching:** Redis-based caching for faster repeated queries and efficient data handling.
 - **API Integration:** Easily configure your YouTube and Last.fm API keys.
+
+### 📰 Fake News Detection System
+- **🤖 Machine Learning Models:** Multiple ML algorithms (Logistic Regression, SVM, Random Forest)
+- **📰 Real-time News Analysis:** Integration with NewsAPI for live news feeds  
+- **🎯 Ensemble Predictions:** Combine multiple models for improved accuracy
+- **📊 Interactive Dashboard:** Streamlit-based web interface with visualizations
+- **☁️ Word Clouds:** Visual representation of fake vs real news patterns
+- **📈 Performance Metrics:** Comprehensive model evaluation and comparison
+- **🔍 Feature Analysis:** Understand which words/features influence predictions
 
 ---
 
@@ -86,7 +102,9 @@ SoundMap also features a recommendation engine that suggests songs based on your
 
 ## Configuration
 
-Before running the app, set your API keys and Redis URL as environment variables or in a `.env` file at the project root:
+### 🎵 SoundMap Music System
+
+Before running the music app, set your API keys and Redis URL as environment variables or in a `.env` file at the project root:
 
 ```
 YOUTUBE_API_KEY=your_youtube_api_key_here
@@ -102,9 +120,21 @@ export LASTFM_API_KEY=your_lastfm_api_key_here
 export REDIS_URL=redis://localhost:6379/0
 ```
 
+### 📰 Fake News Detection System
+
+Optionally configure NewsAPI for real-time news fetching:
+
+```
+NEWS_API_KEY=your_news_api_key_here
+```
+
+The system works with mock data if NewsAPI is not configured.
+
 ---
 
 ## Usage
+
+### 🎵 SoundMap Music System
 
 **1. Start the FastAPI backend:**
 ```bash
@@ -120,6 +150,27 @@ streamlit run frontend/app.py
 
 **3. Visit the Streamlit UI in your browser:**  
 By default: http://localhost:8501
+
+### 📰 Fake News Detection System
+
+**1. Navigate to the fake news detection system:**
+```bash
+cd fake-news-detection
+```
+
+**2. Run the Streamlit application:**
+```bash
+streamlit run streamlit_app/app.py
+```
+
+**3. Access the application:**
+- Fake News Detection: http://localhost:8502
+
+### Quick Start Options
+
+- **Music only**: Run `streamlit run frontend/app.py`
+- **Fake news detection only**: Run `streamlit run fake-news-detection/streamlit_app/app.py`
+- **Both systems**: Run both commands in separate terminals
 
 ---
 
@@ -137,14 +188,33 @@ By default: http://localhost:8501
 ```plaintext
 SoundMap/
 ├── backend/
-│   └── main.py         # FastAPI app (API endpoints, data integration)
+│   ├── main.py         # FastAPI app (API endpoints, data integration)
 │   └── services.py  
 ├── frontend/
-│   └── app.py          # Streamlit UI (user interface, visualization)
+│   ├── app.py          # Streamlit UI (user interface, visualization)
 │   └── styles.css  
-├── requirements.txt    # Python dependencies
-├── README.md           # Project documentation
-├── .env.example        # Example environment configuration
+├── fake-news-detection/     # Complete Fake News Detection System
+│   ├── data/
+│   │   ├── historical/      # Historical news datasets
+│   │   └── processed/       # Processed training data
+│   ├── models/
+│   │   ├── trained_models/  # Saved ML models
+│   │   └── evaluation/      # Model evaluation results
+│   ├── src/
+│   │   ├── preprocessing.py # Text preprocessing and feature extraction
+│   │   ├── training.py      # Model training and hyperparameter tuning
+│   │   ├── prediction.py    # Prediction engine and inference
+│   │   └── api_integration.py # NewsAPI integration
+│   ├── streamlit_app/
+│   │   ├── app.py          # Main Streamlit application
+│   │   ├── components/     # UI components
+│   │   └── utils/          # Utility functions
+│   ├── notebooks/          # Jupyter notebooks for analysis
+│   ├── config.py           # Configuration settings
+│   └── README.md           # Fake news detection documentation
+├── requirements.txt        # Python dependencies (includes both systems)
+├── README.md              # Project documentation
+├── .env.example           # Example environment configuration
 └── ...
 ```
 
